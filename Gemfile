@@ -70,3 +70,9 @@ group :test do
   gem "selenium-webdriver"
 
 end
+
+#adding bootstrap to styling
+
+gem 'bootstrap', '~> 5.3.3'
+gem 'sassc-rails'
+gem 'jquery-rails'
