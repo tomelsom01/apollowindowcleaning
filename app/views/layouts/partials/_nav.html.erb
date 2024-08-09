@@ -11,3 +11,15 @@
   <a href="#">Area</a>
   <a href="#">Contact</a>
 </div>
+<div data-controller="toggle">
+  <button data-action="click->toggle#fire" class="btn btn-primary">mobile nav</button>
+  <div  data-toggle-target="toggleableElement">
+    <button data-action="click->toggle#fire" class="btn btn-danger">mobile back</button>
+    <ul>
+      <li>home</li>
+      <li>services</li>
+      <li>area</li>
+      <li>contact</li>
+    </ul>
+  </div>
+</div>
