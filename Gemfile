@@ -77,4 +77,11 @@ gem 'bootstrap', '~> 5.3.3'
 gem 'sassc-rails'
 gem 'jquery-rails'
 gem "simple_form"
+
+#adding dotenv for environment variables
+
 gem "dotenv-rails"
+
+#adding cloudinary for image upload
+
+gem "cloudinary"

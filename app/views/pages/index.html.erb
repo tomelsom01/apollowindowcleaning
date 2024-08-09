@@ -1,9 +1,21 @@
-<div class="tempimage d-flex justify-content-center align-items-center">
-  <div>
-    <h1>Yor are home!</h1>
-    <p>lets start over</p>
+<div class="tempimage d-flex justify-content-center align-items-center" data-controller="carousel">
+  <div class="new">
+    <button data-action="carousel#prev">Prev</button>
+  </div>
+  <div class="carousel">
+    <%= cl_image_tag("istockphoto-162353089-612x612_nftbc2", alt: "trial cleaning window", class: "active", data: { target: "carousel.image" }) %>
+    <%= cl_image_tag("washing_a_very_tall_window_nywayl", alt: "trial cleaning window2", data: { target: "carousel.image" }) %>
+    <%= cl_image_tag("commercial-window-cleaning-new_nennf8", alt: "trial cleaning window3", data: { target: "carousel.image" }) %>
+    <h1>You are home!</h1>
+    <p>Let's start over</p>
+  </div>
+  <div class="new">
+    <button data-action="carousel#next">Next</button>
   </div>
 </div>
+<div data-controller="toggle">
+</div>
+
 <section class="articles pt-4">
   <article>
     <div class="article-wrapper">
