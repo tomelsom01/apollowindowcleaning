@@ -1,18 +1,21 @@
-<div class="tempimage d-flex justify-content-center align-items-center " data-controller="carousel">
-  <div class="new">
-    <button data-action="carousel#prev">Prev</button>
+<div class="tempimage d-flex justify-content-center align-items-center">
+  <div class="slider">
+    <div class="slides">
+      <img src="https://res.cloudinary.com/daaxwngzv/image/upload/v1722958312/commercial-window-cleaning-new_nennf8.jpg" class="slide" alt="trial cleaning window" />
+    </div>
+    <div class="slides">
+      <img src="https://res.cloudinary.com/daaxwngzv/image/upload/v1722958297/washing_a_very_tall_window_nywayl.jpg" class="slide" alt="trial cleaning window2" />
+    </div>
+    <div class="slides">
+      <img src="https://res.cloudinary.com/daaxwngzv/image/upload/v1722958279/istockphoto-162353089-612x612_nftbc2.jpg" class="slide" alt="trial cleaning window3" />
+    </div>
   </div>
-  <div class="carousel">
-    <%= cl_image_tag("istockphoto-162353089-612x612_nftbc2", alt: "trial cleaning window", class: "active", data: { target: "carousel.image" }) %>
-    <%= cl_image_tag("washing_a_very_tall_window_nywayl", alt: "trial cleaning window2", data: { target: "carousel.image" }) %>
-    <%= cl_image_tag("commercial-window-cleaning-new_nennf8", alt: "trial cleaning window3", data: { target: "carousel.image" }) %>
-    <h1>You are home!</h1>
-    <p>Let's start over</p>
-  </div>
-  <div class="new">
-    <button data-action="carousel#next">Next</button>
-  </div>
+
+    <button class="prev" onclick="prevSlide()" aria-label="Previous Slide">&#10094</button>
+    <button class="next" onclick="nextSlide()" aria-label="Next Slide">&#10095</button>
+
 </div>
+
 
 
 <section class="articles pt-4">
