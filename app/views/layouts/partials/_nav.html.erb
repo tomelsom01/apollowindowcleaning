@@ -1,20 +1,20 @@
-<div class="d-flex justify-content-between bluebackground">
-  <h3>E: abc@123.com</h3>
-  <h3>P: 123-456-7890</h3>
-</div>
-<div class="d-flex justify-content-center">
-  <%= cl_image_tag("window-cleaning-logo-vector-template-design-2PK4XNT_cn2yki", class: "navimage", alt:"The World and I cover") %>
-</div>
 <div class="d-flex justify-content-around bluebackground">
-  <a href="#">Home</a>
-  <a href="#">Services</a>
-  <a href="#">Area</a>
-  <a href="#">Contact</a>
+  <h3>E: apollowindowcleaning124@gmail.com</h3>
+  <h3>T: 07832-355-491</h3>
 </div>
-<div data-controller="toggle">
-  <button data-action="click->toggle#fire" class="btn btn-primary">mobile nav</button>
+<div class="bigscreennav">
+  <div class="d-flex justify-content-center ">
+    <%= cl_image_tag("window-cleaning-logo-vector-template-design-2PK4XNT_cn2yki", class: "navimage", alt:"The World and I cover") %>
+  </div>
+</div>
+<div class="mobilenav navdisplay1 p-3">
+  <div>
+    <%= cl_image_tag("window-cleaning-logo-vector-template-design-2PK4XNT_cn2yki", class: "navimage", alt:"The World and I cover") %>
+  </div>
+  <div data-controller="toggle">
+  <button data-action="click->toggle#fire" class="material-symbols-outlined">menu</button>
   <div  data-toggle-target="toggleableElement">
-    <button data-action="click->toggle#fire" class="btn btn-danger">mobile back</button>
+    <button data-action="click->toggle#fire" class="material-symbols-outlined">close</button>
     <ul>
       <li>home</li>
       <li>services</li>
@@ -22,4 +22,13 @@
       <li>contact</li>
     </ul>
   </div>
+</div>
+
+
+</div>
+<div class="navdisplay bluebackground bigscreennav pt-2 pb-2">
+  <a href="#" class="navlink">Home</a>
+  <a href="#" class="navlink">Services</a>
+  <a href="#" class="navlink">Area</a>
+  <a href="#" class="navlink">Contact</a>
 </div>

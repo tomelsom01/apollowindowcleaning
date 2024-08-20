@@ -1,3 +1,40 @@
 .bluebackground{
   background-color:  #81CAD6;
 }
+
+.navdisplay{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+
+}
+.navlink{
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.navdisplay1{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 20px;
+}
+
+
+/* Media query for screens with a width of 1023px or smaller */
+@media screen and (max-width: 1023px) {
+  .bigscreennav {
+    display: none !important;
+  }
+
+}
+
+/* Media query for screens with a width of 1024px or larger */
+@media screen and (min-width: 1024px) {
+
+  .mobilenav {
+    display: none !important;
+  }
+}
