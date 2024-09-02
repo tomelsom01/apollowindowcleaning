@@ -16,7 +16,7 @@
   <div  data-toggle-target="toggleableElement">
     <button data-action="click->toggle#fire" class="material-symbols-outlined">close</button>
     <ul>
-      <li>home</li>
+      <li><%= link_to "Home", root_path, class: "navlink" %></li>
       <li><%= link_to "services", services_path %></li>
       <li>area</li>
       <li>contact</li>
@@ -27,7 +27,7 @@
 
 </div>
 <div class="navdisplay bluebackground bigscreennav pt-2 pb-2">
-  <a href="#" class="navlink">Home</a>
+  <%= link_to "Home", root_path, class: "navlink" %>
   <%= link_to "Services", services_path, class: "navlink" %>
   <a href="#" class="navlink">Area</a>
   <a href="#" class="navlink">Contact</a>
