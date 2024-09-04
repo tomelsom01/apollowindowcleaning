@@ -17,8 +17,8 @@
     <button data-action="click->toggle#fire" class="material-symbols-outlined">close</button>
     <ul>
       <li><%= link_to "Home", root_path, class: "navlink" %></li>
-      <li><%= link_to "services", services_path %></li>
-      <li>area</li>
+      <li><%= link_to "Services", services_path, class: "navlink" %></li>
+      <li><%= link_to "Area", area_path, class: "navlink" %></li>
       <li>contact</li>
     </ul>
   </div>
@@ -29,6 +29,6 @@
 <div class="navdisplay bluebackground bigscreennav pt-2 pb-2">
   <%= link_to "Home", root_path, class: "navlink" %>
   <%= link_to "Services", services_path, class: "navlink" %>
-  <a href="#" class="navlink">Area</a>
+  <%= link_to "Area", area_path, class: "navlink" %>
   <a href="#" class="navlink">Contact</a>
 </div>

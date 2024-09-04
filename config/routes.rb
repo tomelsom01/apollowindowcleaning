@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   root "pages#index"
   get '/services', to: 'pages#service'
+  get '/area', to: 'pages#area'
 end
