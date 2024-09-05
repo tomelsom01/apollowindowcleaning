@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   root "pages#index"
   get '/services', to: 'pages#service'
   get '/area', to: 'pages#area'
+  get '/contact', to: 'contacts#index'
+   post 'create_contact', to: 'contacts#create_contact'
 end
