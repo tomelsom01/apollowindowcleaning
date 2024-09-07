@@ -4,7 +4,7 @@
       <img src="https://res.cloudinary.com/daaxwngzv/image/upload/v1722958312/commercial-window-cleaning-new_nennf8.jpg" class="slide" alt="trial cleaning window" />
       <div class="slideText">
         <h2>I want clean windows</h2>
-        <h3 class="btn btn-primary"> Book now</h3>
+        <h3><%= link_to "Book Now", contact_path, class: "btn btn-primary" %></h3>
       </div>
     </div>
     <div class="slides">
@@ -19,7 +19,7 @@
 
 
 <section class="articles pt-4" >
-  <article data-bs-toggle="modal" data-bs-target="#reg-modal1">
+  <article>
     <div class="article-wrapper">
       <figure>
         <img src="https://res.cloudinary.com/daaxwngzv/image/upload/v1724162210/glasfassadenreinigung_uzyp7n.webp" alt="" />
@@ -29,12 +29,16 @@
         <p>
           Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
         </p>
-        <a href="#" class="read-more">
-          Read more <span class="sr-only">about this is some title</span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </a>
+
+          <%= link_to services_path do %>
+            <div class="read-more">
+              Read more <span class="sr-only">about this is some title</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </div>
+          <% end %>
+
       </div>
     </div>
   </article>
@@ -49,12 +53,15 @@
         <p>
           Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
         </p>
-        <a href="#" class="read-more">
-          Read more <span class="sr-only">about this is some title</span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </a>
+        <%= link_to services_path do %>
+            <div class="read-more">
+              Read more <span class="sr-only">about this is some title</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </div>
+          <% end %>
+
       </div>
     </div>
   </article>
@@ -69,18 +76,20 @@
         <p>
           Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
         </p>
-        <a href="#" class="read-more">
-          Read more <span class="sr-only">about this is some title</span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </a>
+        <%= link_to services_path do %>
+            <div class="read-more">
+              Read more <span class="sr-only">about this is some title</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </div>
+          <% end %>
       </div>
     </div>
   </article>
 </section>
 
-<div class="container card pt-4 mt-4">
+<div class="container card pt-4 mt-4 mb-4">
 
   <h1>Window Cleaning Services</h1>
   <div class="mainstart pb-4">
@@ -127,48 +136,6 @@
   </div>
   <p>At quibusdam earum et modi esse ab praesentium provident 33 distinctio eaque. A vitae minus ab esse dolorum ut distinctio earum. In esse dolorem sed accusantium voluptatum ut ipsum assumenda aut veniam repellendus qui nobis nesciunt et eius dolor id voluptatem quis. Est nobis ipsum et omnis excepturi et suscipit laboriosam. Sed numquam quas eum corrupti pariatur sit consequatur necessitatibus. Non voluptas quam sit eius sunt in dolor earum. Et impedit quod et repellat dolore sit nihil adipisci qui doloremque ullam in voluptatem accusamus qui adipisci atque. Est delectus quisquam et omnis eligendi qui adipisci maiores cum sapiente dolorum. </p>
 
-</div>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="modal fade" id="reg-modal1" tabindex="-1" aria-labelledby="modal-title"
-aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modal-title"> 1:1 corporate health and wellness sessions</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
-      </div>
-      <div class="modal-body">
-        <p class="card-text text-center">Life these days can be really tough, often leaving us feeling worn out, unhappy, and disconnected from what matters. Our program is here to help you find your way out of that rut. With a plan that's made just for you, our experienced coaches will show you how to handle stress better, find a healthier balance between work and life, and get that spark back in your day-to-day. Through practical advice and real strategies, we'll help you not just bounce back from burnout, but also build a life where you can thrive. Say no to feeling constantly drained and start your journey toward feeling great again. It's time to put your wellbeing first, and we're here to help you do just that.</p>
-              <p class="card-text text-center">Price: 55.00 per hour, block booking prices can be offered at a discounted rate below:</p>
-              <p class="card-text text-center">5x sessions – 250.00</p>
-              <p class="card-text text-center">10x sessions – 500.00</p>
-      </div>
-    </div>
-  </div>
 </div>
 
 
