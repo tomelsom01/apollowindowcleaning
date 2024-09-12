@@ -1,12 +1,20 @@
 .footer-banner {
   background-color: #FFD700; /* A vibrant golden yellow */
   color: #3A4A76; /* Text color matching the darker blue from the background gradient */
+  width: 100%;
   padding: 20px;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.2em; /* Allow the content to grow */
 }
 
 .footerimage {
   width: 20vw;
   object-fit: cover;
+}
+
+.fixfooter{
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh; /* Full viewport height */
+  margin: 0;
 }

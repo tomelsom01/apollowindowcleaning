@@ -13,7 +13,7 @@
   </div>
   <div data-controller="toggle">
   <button data-action="click->toggle#fire" class="material-symbols-outlined">menu</button>
-  <div  data-toggle-target="toggleableElement">
+  <div  data-toggle-target="toggleableElement" class="d-none">
     <button data-action="click->toggle#fire" class="material-symbols-outlined">close</button>
     <ul>
       <li><%= link_to "Home", root_path, class: "navlink" %></li>

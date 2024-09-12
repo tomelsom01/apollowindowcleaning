@@ -1,3 +1,5 @@
+
+
 article {
   --img-scale: 1.001;
   --title-color: black;
@@ -85,6 +87,7 @@ article:has(:hover, :focus) {
 *::after {
   box-sizing: border-box;
 }
+
 
 body {
   font-size: 1.2rem;

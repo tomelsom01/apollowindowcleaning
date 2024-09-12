@@ -1,19 +1,14 @@
 <div class="tempimage d-flex justify-content-center align-items-center">
-  <div class="slider">
-    <div class="slides">
-      <img src="https://res.cloudinary.com/daaxwngzv/image/upload/v1722958312/commercial-window-cleaning-new_nennf8.jpg" class="slide" alt="trial cleaning window" />
-      <div class="slideText">
-        <h2>I want clean windows</h2>
-        <h3><%= link_to "Book Now", contact_path, class: "btn btn-primary" %></h3>
-      </div>
-    </div>
-    <div class="slides">
-      <img src="https://res.cloudinary.com/daaxwngzv/image/upload/v1722958297/washing_a_very_tall_window_nywayl.jpg" class="slide" alt="trial cleaning window2" />
-    </div>
-    <div class="slides">
-      <img src="https://res.cloudinary.com/daaxwngzv/image/upload/v1722958279/istockphoto-162353089-612x612_nftbc2.jpg" class="slide" alt="trial cleaning window3" />
-    </div>
+  <div data-controller="slideshow" data-slideshow-index-value="1">
+
+    <img data-slideshow-target="slide" src="https://res.cloudinary.com/daaxwngzv/image/upload/v1722958312/commercial-window-cleaning-new_nennf8.jpg" alt="Slide 1">
+    <img data-slideshow-target="slide" src="https://res.cloudinary.com/daaxwngzv/image/upload/v1722958297/washing_a_very_tall_window_nywayl.jpg" alt="Slide 2" >
+    <img data-slideshow-target="slide" src="https://res.cloudinary.com/daaxwngzv/image/upload/v1722958279/istockphoto-162353089-612x612_nftbc2.jpg" alt="Slide 3">
+
+    <button data-action="slideshow#previous">Previous</button>
+    <button data-action="slideshow#next">Next</button>
   </div>
+
 </div>
 
 
@@ -137,7 +132,3 @@
   <p>At quibusdam earum et modi esse ab praesentium provident 33 distinctio eaque. A vitae minus ab esse dolorum ut distinctio earum. In esse dolorem sed accusantium voluptatum ut ipsum assumenda aut veniam repellendus qui nobis nesciunt et eius dolor id voluptatem quis. Est nobis ipsum et omnis excepturi et suscipit laboriosam. Sed numquam quas eum corrupti pariatur sit consequatur necessitatibus. Non voluptas quam sit eius sunt in dolor earum. Et impedit quod et repellat dolore sit nihil adipisci qui doloremque ullam in voluptatem accusamus qui adipisci atque. Est delectus quisquam et omnis eligendi qui adipisci maiores cum sapiente dolorum. </p>
 
 </div>
-
-
-
-<%= javascript_include_tag('test.js') %>
