@@ -1,57 +1,55 @@
-
-
-.slider{
+.slider {
   position: relative;
-  width: 100%;
+  width: 100vw;
   margin: auto;
   overflow: hidden;
-}
-.slideText {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white; /* Text color */
-  font-size: 2em; /* Adjust font size */
-  text-align: center; /* Center the text */
-  background-color: rgba(0, 0, 0, 0.5); /* Optional: add background color with opacity */
-  padding: 10px 20px; /* Optional: add padding to the text */
-  border-radius: 8px; /* Optional: add rounded corners */
-  z-index: 10;
-}
-.slider img{
-  width: 100%;
-  display: none;
-  height: 30vh;
-  object-fit: cover;
-  filter: blur(5px);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-img.displaySlide{
+.slideimage {
+  width: 100vw;
+  object-fit: cover;
+  filter: blur(5px);
+  z-index: 1;
+}
+
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better visibility */
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.slider button:hover {
+  background: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
+/* Left button */
+.slider button[data-action="slideshow#previous"] {
+  left: 10px; /* Place the button on the left side */
+}
+
+/* Right button */
+.slider button[data-action="slideshow#next"] {
+  right: 20px; /* Place the button on the right side */
+}
+
+img.displaySlide {
   display: block;
   animation-name: fade;
   animation-duration: 1.5s;
 }
 
-.slider button{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  background: #00000000;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  z-index: 10;
-}
-.prev{
-  left: 0;
-}
-.next{
-  right: 0;
-}
-@keyframes fade{
+@keyframes fade {
   from {opacity: 0.4;}
   to {opacity: 1;}
 }
