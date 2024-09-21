@@ -7,22 +7,29 @@
     <%= cl_image_tag("window-cleaning-logo-vector-template-design-2PK4XNT_cn2yki", class: "navimage", alt:"The World and I cover") %>
   </div>
 </div>
-<div class="mobilenav navdisplay1 p-3">
+<div class="mobilenav navdisplay1 p-3" data-controller="toggle">
   <div>
     <%= cl_image_tag("window-cleaning-logo-vector-template-design-2PK4XNT_cn2yki", class: "navimage", alt:"The World and I cover") %>
   </div>
-  <div data-controller="toggle">
-  <button data-action="click->toggle#fire" class="material-symbols-outlined">menu</button>
-  <div  data-toggle-target="toggleableElement" class="d-none">
-    <button data-action="click->toggle#fire" class="material-symbols-outlined">close</button>
+
+  <!-- Button to open the menu -->
+  <button data-action="click->toggle#fire" class="material-symbols-outlined" aria-expanded="false">menu</button>
+
+  <!-- Blurred background overlay -->
+  <div class="blurred-background" data-toggle-target="blurBackground"></div>
+
+  <!-- Sliding menu -->
+  <div data-toggle-target="toggleableElement" class="menu-hidden">
+    <button data-action="click->toggle#fire" class="material-symbols-outlined textblack2" aria-expanded="true">close</button>
     <ul>
-      <li><%= link_to "Home", root_path, class: "navlink" %></li>
-      <li><%= link_to "Services", services_path, class: "navlink" %></li>
-      <li><%= link_to "Area", area_path, class: "navlink" %></li>
-      <li><%= link_to "Contact", contact_path, class: "navlink" %></li>
+      <li><%= link_to "Home", root_path, class: "navlink textblack2" %></li>
+      <li><%= link_to "Services", services_path, class: "navlink textblack2" %></li>
+      <li><%= link_to "Area", area_path, class: "navlink textblack2" %></li>
+      <li><%= link_to "Contact", contact_path, class: "navlink textblack2" %></li>
     </ul>
   </div>
 </div>
+
 
 
 </div>
