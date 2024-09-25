@@ -1,4 +1,4 @@
-<div class="d-flex justify-content-around bluebackground">
+<div class="d-flex justify-content-around bluebackground bigscreennav">
   <h3>E: apollowindowcleaning124@gmail.com</h3>
   <h3>T: 07832-355-491</h3>
 </div>
@@ -13,20 +13,21 @@
   </div>
 
   <!-- Button to open the menu -->
-  <button data-action="click->toggle#fire" class="material-symbols-outlined" aria-expanded="false">menu</button>
+  <button data-toggle-target="menuButton" data-action="click->toggle#fire" class="material-symbols-outlined" aria-expanded="false">menu</button>
 
   <!-- Blurred background overlay -->
-  <div class="blurred-background" data-toggle-target="blurBackground"></div>
+  <div  data-toggle-target="blurBackground">
 
-  <!-- Sliding menu -->
-  <div data-toggle-target="toggleableElement" class="menu-hidden">
-    <button data-action="click->toggle#fire" class="material-symbols-outlined textblack2" aria-expanded="true">close</button>
-    <ul>
-      <li><%= link_to "Home", root_path, class: "navlink textblack2" %></li>
-      <li><%= link_to "Services", services_path, class: "navlink textblack2" %></li>
-      <li><%= link_to "Area", area_path, class: "navlink textblack2" %></li>
-      <li><%= link_to "Contact", contact_path, class: "navlink textblack2" %></li>
-    </ul>
+    <!-- Sliding menu -->
+    <div data-toggle-target="toggleableElement" class="menu-hidden">
+      <ul class="sidebar">
+        <li><button data-toggle-target="closeButton" class="material-symbols-outlined menu-button-hidden" data-action="click->toggle#fire" aria-expanded="true">close</button></li>
+        <li><%= link_to "Home", root_path, class: "navlink" %></li>
+        <li><%= link_to "Services", services_path, class: "navlink" %></li>
+        <li><%= link_to "Area", area_path, class: "navlink" %></li>
+        <li><%= link_to "Contact", contact_path, class: "navlink" %></li>
+      </ul>
+    </div>
   </div>
 </div>
 

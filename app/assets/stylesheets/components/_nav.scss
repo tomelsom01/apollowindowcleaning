@@ -1,135 +1,113 @@
-.bluebackground{
-  background-color:  #81CAD6;
+/* General styles */
+.bluebackground {
+  background-color: #81CAD6;
   border: 1px solid #FFD700;
 }
 
-.navdisplay{
+/* Big screen navigation */
+.bigscreennav {
+  position: relative;
+  z-index: 10000;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-
+  padding: 10px 20px;
 }
-.navlink{
+
+.navlinks {
+  display: flex;
+  gap: 20px;
+}
+
+.navlink {
   color: white;
   text-decoration: none;
   font-size: 1.5em;
 }
 
-.navdisplay1{
+/* Mobile navigation */
+.mobilenav {
+  position: relative;
+  z-index: 10000;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 10px 20px;
 }
 
+/* Sidebar styling */
+.sidebar {
+  position: fixed;
+  height: 100vh;
+  width: 250px;
+  z-index: 99999;
+  background-color: white;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
 
-/* Media query for screens with a width of 1023px or smaller */
+.sidebar li{
+  list-style: none;
+}
+
+/* Hide/show menu */
+.menu-hidden {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.menu-visible {
+  transform: translateX(0);
+  opacity:1;
+  width: 100vw;
+}
+
+/* Media query for screens 1023px or smaller */
 @media screen and (max-width: 1023px) {
   .bigscreennav {
     display: none !important;
   }
 
+  .navlink {
+    color: black;
+    text-decoration: none;
+    list-style: none;
+  }
 }
 
-/* Media query for screens with a width of 1024px or larger */
+/* Media query for screens 1024px or larger */
 @media screen and (min-width: 1024px) {
-
   .mobilenav {
     display: none !important;
   }
 }
 
-/* Base styling for the sliding menu */
-.menu-hidden {
-  position: fixed;
-  top: 0;
-  right: -300px; /* Initially off-screen */
-  height: 100%;
-  width: 300px; /* Adjust width for the menu */
-  background-color: #fff; /* White background for the menu */
-  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1); /* Shadow for professional look */
-  transition: right 0.4s ease-in-out; /* Smooth sliding effect */
-  z-index: 1000; /* High z-index to ensure it's on top */
-  overflow-y: auto;
+/* Blurred background for mobile menu */
+.blurBackground {
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
-/* When menu is visible, slide it into view */
-.menu-visible {
-  right: 0;
-}
-
-/* Styling for the blurred background overlay */
-.blurred-background {
-  position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
-/* When menu is visible, show the background */
 .blurred-background-visible {
-  opacity: 1;
-  pointer-events: all; /* Allow interactions with the background */
-}
-
-/* Styling for the menu links */
-ul {
-  list-style: none;
-  padding: 20px;
-  margin: 0;
-}
-
-ul li {
-  margin-bottom: 15px;
-}
-
-ul li a {
-  text-decoration: none;
-  font-size: 1.2rem;
-  color: #333; /* Dark color for the links */
   display: block;
-  padding: 10px 15px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  opacity: 1;
+  width: 100vw;
 }
 
-/* Hover effect on the links */
-ul li a:hover {
-  background-color: #f0f0f0; /* Subtle hover effect */
+/* Disable scrolling when menu is open */
+body.menu-open {
+  overflow: hidden;
 }
 
-.textblack2 {
-  color: #333; /* Text color */
-  text-decoration: none; /* Remove default underline */
-  position: relative;
-}
-
-/* Add an underline and make it transparent initially */
-.textblack2::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px; /* Adjust the thickness of the underline */
-  bottom: 0;
-  left: 0;
-  background: #333; /* Color of the underline */
-  transform: scaleX(0); /* Initially invisible */
-  transform-origin: bottom;
-  transition: transform 0.3s ease; /* Transition for the underline */
-}
-
-/* Hover effect to slowly underline the text */
-.textblack2:hover::before {
-  transform: scaleX(1); /* Slowly underline on hover */
+/* Hide the menu button when the menu is open */
+.menu-button-hidden {
+  opacity: 0;
+  z-index: -1;
 }
 

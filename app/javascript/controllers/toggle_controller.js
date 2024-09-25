@@ -19,5 +19,9 @@ export default class extends Controller {
 
     // Toggle background blur effect
     blurBackground.classList.toggle('blurred-background-visible');
+
+    // Hide the menu button when the menu is open
+    this.menuButtonTarget.classList.toggle('menu-button-hidden');
+    this.closeButtonTarget.classList.toggle('menu-button-hidden');
   }
 }
