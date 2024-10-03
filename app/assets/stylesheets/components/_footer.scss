@@ -1,5 +1,17 @@
+
+.fixfooter{
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh; /* Full viewport height */
+  margin: 0;
+}
 .footer-banner {
-  background-color: #FFD700; /* A vibrant golden yellow */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #f1f1f1; /* Optional: for better visibility */
+  flex-wrap: wrap; /* Ensure elements wrap on smaller screens */
   color: #3A4A76; /* Text color matching the darker blue from the background gradient */
   width: 100%;
   padding: 20px;
@@ -8,13 +20,38 @@
 }
 
 .footerimage {
-  width: 20vw;
+  width: 100px; /* Adjust image size for smaller screens */
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
-.fixfooter{
-  display: flex;
-  flex-direction: column;
-  min-height: 50vh; /* Full viewport height */
-  margin: 0;
+.footer-banner h3 {
+  font-size: 18px; /* Adjust text size for better readability */
+  text-align: center; /* Center text for smaller screens */
+}
+
+@media (max-width: 768px) {
+  .footer-banner {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    text-align: center;
+  }
+
+  .footerimage {
+    width: 80px; /* Resize image further for mobile screens */
+  }
+
+  .footer-banner h3 {
+    font-size: 16px; /* Reduce font size on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footerimage {
+    width: 60px; /* Even smaller image size for very small screens */
+  }
+
+  .footer-banner h3 {
+    font-size: 14px; /* Further reduce font size for mobile */
+  }
 }

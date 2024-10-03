@@ -7,26 +7,23 @@
     <%= cl_image_tag("window-cleaning-logo-vector-template-design-2PK4XNT_cn2yki", class: "navimage", alt:"The World and I cover") %>
   </div>
 </div>
-<div class="mobilenav navdisplay1 p-3" data-controller="toggle">
+<div class="mobilenav navdisplay1 p-3" >
   <div>
-    <%= cl_image_tag("window-cleaning-logo-vector-template-design-2PK4XNT_cn2yki", class: "navimage", alt:"The World and I cover") %>
+    <%= cl_image_tag("window-cleaning-logo-vector-template-design-2PK4XNT_cn2yki", class: "navimage1", alt:"The World and I cover") %>
   </div>
 
   <!-- Button to open the menu -->
-  <button data-toggle-target="menuButton" data-action="click->toggle#fire" class="material-symbols-outlined" aria-expanded="false">menu</button>
-
-  <!-- Blurred background overlay -->
-  <div  data-toggle-target="blurBackground">
-
-    <!-- Sliding menu -->
-    <div data-toggle-target="toggleableElement" class="menu-hidden">
-      <ul class="sidebar">
-        <li><button data-toggle-target="closeButton" class="material-symbols-outlined menu-button-hidden" data-action="click->toggle#fire" aria-expanded="true">close</button></li>
-        <li><%= link_to "Home", root_path, class: "navlink" %></li>
-        <li><%= link_to "Services", services_path, class: "navlink" %></li>
-        <li><%= link_to "Area", area_path, class: "navlink" %></li>
-        <li><%= link_to "Contact", contact_path, class: "navlink" %></li>
-      </ul>
+  <div data-controller="toggle">
+    <button data-toggle-target="menuButton" data-action="click->toggle#toggle" class="material-symbols-outlined" aria-expanded="false">menu</button>    <!-- Toggle target is the div containing the menu -->
+      <div data-toggle-target="toggalableElement" class="sidebar sidebar-hidden">
+        <ul>
+          <li class="righttext"><button data-action="click->toggle#toggle" class="material-symbols-outlined" aria-expanded="true">close</button></li>
+          <li><%= link_to "Home", root_path, class: "navlink" %></li>
+          <li><%= link_to "Services", services_path, class: "navlink" %></li>
+          <li><%= link_to "Area", area_path, class: "navlink" %></li>
+          <li><%= link_to "Contact", contact_path, class: "navlink" %></li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

@@ -19,9 +19,7 @@
     <%= render partial: "layouts/partials/nav" %>
     <%= yield %>
     <%= render partial: "layouts/partials/footer" %>
-    <% if current_page?(controller: 'pages', action: 'index') %>
-      <%= javascript_include_tag('test.js') %>
-    <% end %>
+    
 
     <!-- Bootstrap JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
