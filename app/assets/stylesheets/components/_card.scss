@@ -101,7 +101,7 @@ body {
   max-width: 1200px;
   margin-inline: auto;
   padding-inline: 24px;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
@@ -151,4 +151,15 @@ body {
 }
 .para1{
   flex:1;
+}
+@media (max-width: 992px) {
+  .articles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .articles {
+    grid-template-columns: 1fr;
+  }
 }
